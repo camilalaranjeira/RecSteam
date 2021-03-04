@@ -1,0 +1,30 @@
+australian_user_reviews:
+	{'user_id': 'xxxxx',
+	'user_url': 'xxxxx',
+	'reviews': [
+		{'funny': x, 'posted': 'xxxx', 'last_edited': 'xxx', 'item_id': 'xxxx', 'helpful': 'x', 'recommend': True|False, 'review': 'xxxxxxxxxx'}, {...}]
+	}
+
+Útil: user_id, e para cada review: item_id, recommend, posted
+
+
+australian_users_items:
+	{'user_id': 'xxxxx', 'items_count': x, 'steam_id': 'xxxx', 'user_url': 'xxxx', 
+	'items': [
+		{'item_id': 'xx', 'item_name': 'xxxxx', 'playtime_forever': x, 'playtime_2weeks': x}, {...}]
+	}
+
+Útil: user_id ou steam_id, e para cada item: item_id, item_name, playtime_forever, playtime_2weeks
+
+
+steam_games:
+	{u'publisher': u'xxxx', u'genres': [u'xxx', u'xxx', ...], u'app_name': u'xxxx', u'title': u'xxxx', u'url': u'xxxx', u'release_date': u'xxxx', u'tags': [u'xxxx', u'xxxx', ...], u'discount_price': x, u'reviews_url': u'xxxxx', u'specs': [u'xxxx', ...], u'price': x, u'early_access': True|False, u'id': u'xxxx', u'developer': u'xxxx'}
+
+Útil: apenas para content-based baseado nas features do arquivo
+
+
+
+steam_reviews:
+	{u'username': u'xxxx', u'user_id: u'xxxxx', u'hours': x, u'products': x, u'product_id': u'xxxx', u'page_order': x, u'date': u'xxxx', u'text': u'xxxxxx', u'early_access': True|False, u'page': x, u'compensation: 'xxx', u'found funny': x}
+
+Útil: username, user_id, hours, product_id, date
