@@ -14,11 +14,20 @@ from sklearn.metrics.pairwise import cosine_similarity
 from scipy.sparse.linalg import svds
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
-from surprise import SVD
+from surprise import SVD, KNNWithMeans
 from surprise import Dataset
 from surprise import Reader
 from surprise import accuracy
 from surprise.model_selection import GridSearchCV
+
+#RATING_TYPE = 'binary'
+#RATING_TYPE = 'log'
+RATING_TYPE = 'bins'
+
+GRID_SEARCH = False
+
+#ALGO = 'SVD'
+ALGO = 'item-based'
 
 def process_json(content, filename):
     if filename == 'steam_reviews.json':
@@ -28,8 +37,18 @@ def process_json(content, filename):
             
         if 'hours' not in content:
             content['hours'] = 0
+        playtime = content['hours']
+        if RATING_TYPE == 'log':
+            if playtime > 0:
+                playtime = math.log10(playtime)
+        elif RATING_TYPE == 'bins':
+            if playtime > 100:
+                playtime = 100
+            playtime = playtime//10
+        else:
+            playtime = 1
             
-        play_times = [(user_id, content['product_id'], math.log10(content['hours']))]
+        play_times = [(user_id, content['product_id'], playtime)]
     else:
         content = eval(content)
         user_id = content['user_id']
@@ -37,12 +56,17 @@ def process_json(content, filename):
         for item in content['items']:
             item_id = item['item_id']
             playtime = item['playtime_forever']
-            #if playtime > 0:
-            #    playtime = math.log10(playtime)
-            if playtime > 100:
-                playtime = 100
-            playtime = playtime//10
-            play_times.append((user_id, item_id, playtime))
+            if playtime >= 0:
+                if RATING_TYPE == 'log':
+                    if playtime > 0:
+                        playtime = math.log10(playtime)
+                elif RATING_TYPE == 'bins':
+                    if playtime > 100:
+                        playtime = 100
+                    playtime = playtime//10
+                else:
+                    playtime = 1
+                play_times.append((user_id, item_id, playtime))
         
     return play_times
 
@@ -79,10 +103,11 @@ def read_datafile(data_file):
         tic = time.time()
         for review in f:        
             review = process_json(review, data_file)
-            list_reviews.extend(review)
-            cont += 1
-            if cont == 10000:
-                break
+            if len(review) > 0:            
+                list_reviews.extend(review)
+                cont += 1
+                #if cont == 100000:
+                #    break
         toc = time.time()
         print("Finished reading data file in {}s".format(int(toc-tic)))
     return list_reviews
@@ -106,30 +131,44 @@ interactions_from_selected_users_df = interactions_df.merge(users_with_enough_in
     right_on = 'UserId')
 print('# of interactions from users with at least 5 interactions: %d' % len(interactions_from_selected_users_df))
 interactions_full_df = interactions_from_selected_users_df
+"""
+if RATING_TYPE == 'log':
+    reader = Reader(rating_scale=(0, max(interactions_full_df['Playtime'])))
+elif RATING_TYPE == 'bins':
+    reader = Reader(rating_scale=(0, 10))
+else:
+    reader = Reader(rating_scale=(0, 1))
 
-#reader = Reader(rating_scale=(0, max(interactions_full_df['Playtime'])))
-reader = Reader(rating_scale=(0, 10))
 data = Dataset.load_from_df(interactions_full_df[["UserId", "ItemId", "Playtime"]], reader)
 
-param_grid = {
-    "n_epochs": [50, 75, 100],
-    "lr_all": [0.002, 0.005],
-    "reg_all": [0.4, 0.6]
-}
-gs = GridSearchCV(SVD, param_grid, measures=["rmse", "mae"], cv=4, n_jobs=4)
+if GRID_SEARCH:
+    param_grid = {
+        "n_epochs": [50, 75, 100],
+        "lr_all": [0.002, 0.005],
+        "reg_all": [0.4, 0.6]
+    }
+    gs = GridSearchCV(SVD, param_grid, measures=["rmse", "mae"], cv=4, n_jobs=4)
 
-gs.fit(data)
+    gs.fit(data)
 
-print(gs.best_score["rmse"])
-print(gs.best_params["rmse"])
+    print(gs.best_score["rmse"])
+    print(gs.best_params["rmse"])
+else:
+    # Train/test split
+    trainset, testset = train_test_split(data, test_size=.2)
+    
+    if ALGO == 'SVD':
+        algo = SVD(n_epochs=1, lr_all=0.002, reg_all=0.4, verbose=True)
+    else:
+        sim_options = {
+        "name": "cosine",
+        "user_based": False,  # Compute  similarities between items
+        }
+        algo = KNNWithMeans(sim_options=sim_options)
 
-"""
-# Train/test split
-trainset, testset = train_test_split(data, test_size=.2)
-
-algo = SVD()
-algo.fit(trainset)
-predictions = algo.test(testset)
-
-print(accuracy.rmse(predictions))
+    algo.fit(trainset)
+    predictions = algo.test(testset)
+    for pred in predictions:
+        print('{}:{} - {} / {}'.format(pred[0],pred[1],pred[3],pred[2]))
+    print(accuracy.rmse(predictions))
 """
