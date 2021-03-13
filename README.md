@@ -25,3 +25,8 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | user_mean  | 2.063 |1    | user_mean  | 2.063 |2    | user_mean  | 2.059 |3    | user_mean  | 2.065 |4    | user_mean  | 2.062 |
 0    | item_mean  | 1.753 |1    | item_mean  | 1.752 |2    | item_mean  | 1.747 |3    | item_mean  | 1.753 |4    | item_mean  | 1.753 |
 0    | random     | 2.627 |1    | random     | 2.622 |2    | random     | 2.620 |3    | random     | 2.624 |4    | random     | 2.625 |
+0    | item-based | 1.776 |1    | item-based | 1.774 |2    | item-based | 1.771 |3    | item-based | 1.777 |4    | item-based | 1.775 |
+0    | SVD        | 1.753 |1    | SVD        | 1.756 |2    | SVD        | 1.749 |3    | SVD        | 1.756 |4    | SVD        | 1.753 |
+
+item-based: KNN with Means, k=40
+SVD: epochs=100, lr=0.002, reg_all=0.4
