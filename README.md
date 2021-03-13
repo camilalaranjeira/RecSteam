@@ -31,3 +31,23 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 item-based: KNN with Means, k=40.
 
 SVD: epochs=100, lr=0.002, reg_all=0.4.
+
+
+### Método B
+- Filtrando usuários e itens que apresentam < 10 interações.
+- Rating: **Playtime** [0:'inf']. Tempo em minutos de jogo.
+- Normalizado playtime para o intervalo [0:10] 
+```python
+if rating['playtime'] == user_median:  score = 5
+elif rating['playtime'] > user_median: score = 5 + 5*(rating['playtime']-user_median)/(user_max-user_median)
+else: score = 5 - 5*(rating['playtime']-user_min)/(user_median-user_min)
+```
+#### Results
+4035113 interactions, 53870 users and 7697 items after filtering. <br>
+5-fold
+
+Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  |
+-----|------------|-------|-----|------------|-------|-----|------------|-------|-----|------------|-------|-----|------------|-------|
+0    | user_mean  | 1.183 |1    | user_mean  | 1.183 |2    | user_mean  | 1.184 |3    | user_mean  | 1.186 |4    | user_mean  | 1.184 |
+0    | item_mean  | 1.108 |1    | item_mean  | 1.108 |2    | item_mean  | 1.110 |3    | item_mean  | 1.111 |4    | item_mean  | 1.109 |
+0    | random     | 4.486 |1    | random     | 4.485 |2    | random     | 4.487 |3    | random     | 4.485 |4    | random     | 4.486 |
