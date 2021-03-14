@@ -27,6 +27,7 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | random     | 2.627 |1    | random     | 2.622 |2    | random     | 2.620 |3    | random     | 2.624 |4    | random     | 2.625 |
 0    | item-based | 1.776 |1    | item-based | 1.774 |2    | item-based | 1.771 |3    | item-based | 1.777 |4    | item-based | 1.775 |
 0    | SVD        | 1.753 |1    | SVD        | 1.756 |2    | SVD        | 1.749 |3    | SVD        | 1.756 |4    | SVD        | 1.753 |
+0    | SVD-spotlight | 2.103 |1    | SVD-spotlight | 2.101 |2    | SVD-spotlight | 2.099 |3    | SVD-spotlight | 2.303 |4    | SVD-spotlight | 2.318 |
 
 item-based: KNN with Means, k=40.
 
