@@ -33,6 +33,8 @@ item-based: KNN with Means, k=40.
 
 SVD: epochs=100, lr=0.002, reg_all=0.4.
 
+SVD-spotlight: epochs=10, learning_rate=1e-3, l2=1e-9, embedding_dim=128, batch_size=1024,.
+
 
 ### Método B
 - Filtrando usuários e itens que apresentam < 10 interações.
