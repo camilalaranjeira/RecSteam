@@ -34,13 +34,15 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | item-based | 1.776 |1    | item-based | 1.774 |2    | item-based | 1.771 |3    | item-based | 1.777 |4    | item-based | 1.775 |
 0    | SVD        | 1.753 |1    | SVD        | 1.756 |2    | SVD        | 1.749 |3    | SVD        | 1.756 |4    | SVD        | 1.753 |
 0    | SVD-spotlight | 2.103 |1    | SVD-spotlight | 2.101 |2    | SVD-spotlight | 2.099 |3    | SVD-spotlight | 2.303 |4    | SVD-spotlight | 2.318 |
+0    | Co-Clustering | 1.900 |1    | Co-Clustering | 1.913 |2    | Co-Clustering | 1.912 |3    | Co-Clustering | 1.912 |4    | Co-Clustering | 1.907 |
 
 item-based: KNN with Means, k=40.
 
 SVD: epochs=100, lr=0.002, reg_all=0.4.
 
-SVD-spotlight: epochs=10, learning_rate=1e-3, l2=1e-9, embedding_dim=128, batch_size=1024,.
+SVD-spotlight: epochs=10, learning_rate=1e-3, l2=1e-9, embedding_dim=128, batch_size=1024.
 
+Co-Clustering: n_cltr_u=40, n_cltr_i=40, n_epochs=100.
 
 ### Método B
 - Filtrando usuários e itens que apresentam < 10 interações.
