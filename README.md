@@ -5,7 +5,7 @@ Dataset: https://cseweb.ucsd.edu/~jmcauley/datasets.html#steam_data <br>
 Steam API: https://developer.valvesoftware.com/wiki/Steam_Web_API
 
 ## Folds
-Link: https://drive.google.com/file/d/1ra83yrZOjc_z8YasoBIq-ZA4pvSXlBM6/view?usp=sharing
+Link: https://drive.google.com/file/d/1ra83yrZOjc_z8YasoBIq-ZA4pvSXlBM6/view?usp=sharing <br>
 Descrição:
 * `playtime`: Normalização A (vide baselines)
 * `score`: Normalização B (vide baselines)
