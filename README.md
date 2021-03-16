@@ -62,3 +62,4 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | user_mean  | 1.183 |1    | user_mean  | 1.183 |2    | user_mean  | 1.184 |3    | user_mean  | 1.186 |4    | user_mean  | 1.184 |
 0    | item_mean  | 1.108 |1    | item_mean  | 1.108 |2    | item_mean  | 1.110 |3    | item_mean  | 1.111 |4    | item_mean  | 1.109 |
 0    | random     | 4.486 |1    | random     | 4.485 |2    | random     | 4.487 |3    | random     | 4.485 |4    | random     | 4.486 |
+0    | Co-Clustering | 1.350 |1    | Co-Clustering | 1.351 |2    | Co-Clustering | 1.357 |3    | Co-Clustering | 1.350 |4    | Co-Clustering | 1.350 |
