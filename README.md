@@ -62,6 +62,12 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | user_mean  | 1.183 |1    | user_mean  | 1.183 |2    | user_mean  | 1.184 |3    | user_mean  | 1.186 |4    | user_mean  | 1.184 |
 0    | item_mean  | 1.108 |1    | item_mean  | 1.108 |2    | item_mean  | 1.110 |3    | item_mean  | 1.111 |4    | item_mean  | 1.109 |
 0    | random     | 4.486 |1    | random     | 4.485 |2    | random     | 4.487 |3    | random     | 4.485 |4    | random     | 4.486 |
+0    | item-based | 1.262 |1    | item-based | 1.260 |2    | item-based | 1.261 |3    | item-based | 1.259 |4    | item-based | 1.260 |
+0    | SVD        | 1.228 |1    | SVD        | 1.227 |2    | SVD        | 1.229 |3    | SVD        | 1.227 |4    | SVD        | 1.227 |
 0    | Co-Clustering | 1.350 |1    | Co-Clustering | 1.351 |2    | Co-Clustering | 1.357 |3    | Co-Clustering | 1.350 |4    | Co-Clustering | 1.350 |
+
+item-based: KNN with Means, k=60.
+
+SVD: epochs=100, lr=0.002, reg_all=0.4.
 
 Co-Clustering: n_cltr_u=40, n_cltr_i=40, n_epochs=100.
