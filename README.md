@@ -35,7 +35,8 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | SVD        | 1.753 |1    | SVD        | 1.756 |2    | SVD        | 1.749 |3    | SVD        | 1.756 |4    | SVD        | 1.753 |
 0    | SVD-spotlight | 2.103 |1    | SVD-spotlight | 2.101 |2    | SVD-spotlight | 2.099 |3    | SVD-spotlight | 2.303 |4    | SVD-spotlight | 2.318 |
 0    | Co-Clustering | 1.900 |1    | Co-Clustering | 1.913 |2    | Co-Clustering | 1.912 |3    | Co-Clustering | 1.912 |4    | Co-Clustering | 1.907 |
-0    | i2v tag-based | 2.267 |1    | i2v tag-based | 2.256 |2    | i2v tag-based | 2.241 |3    | i2v tag-based | 2.242 |4    | i2v tag-based | 2.214 | 
+0    | i2v tag-based | 2.267 |1    | i2v tag-based | 2.256 |2    | i2v tag-based | 2.241 |3    | i2v tag-based | 2.242 |4    | i2v tag-based | 2.214 |
+0    | genre tag-based | 2.227 |1    | i2v tag-based | 2.221 |2    | i2v tag-based | 2.209 |3    | i2v tag-based | 2.220 |4    | i2v tag-based | 2.204 | 
 
 item-based: KNN with Means, k=40.
 
@@ -66,6 +67,8 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | item-based | 1.262 |1    | item-based | 1.260 |2    | item-based | 1.261 |3    | item-based | 1.259 |4    | item-based | 1.260 |
 0    | SVD        | 1.228 |1    | SVD        | 1.227 |2    | SVD        | 1.229 |3    | SVD        | 1.227 |4    | SVD        | 1.227 |
 0    | Co-Clustering | 1.350 |1    | Co-Clustering | 1.351 |2    | Co-Clustering | 1.357 |3    | Co-Clustering | 1.350 |4    | Co-Clustering | 1.350 |
+0    | i2v tag-based | 1.257 |1    | i2v tag-based | 1.239 |2    | i2v tag-based | 1.223 |3    | i2v tag-based | 1.200 |4    | i2v tag-based | 1.332 | 
+0    | genre tag-based | 1.233 |1    | i2v tag-based |  |2    | i2v tag-based |  |3    | i2v tag-based |  |4    | i2v tag-based |  | 
 
 item-based: KNN with Means, k=60.
 
