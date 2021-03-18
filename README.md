@@ -35,6 +35,7 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | SVD        | 1.753 |1    | SVD        | 1.756 |2    | SVD        | 1.749 |3    | SVD        | 1.756 |4    | SVD        | 1.753 |
 0    | SVD-spotlight | 2.103 |1    | SVD-spotlight | 2.101 |2    | SVD-spotlight | 2.099 |3    | SVD-spotlight | 2.303 |4    | SVD-spotlight | 2.318 |
 0    | Co-Clustering | 1.900 |1    | Co-Clustering | 1.913 |2    | Co-Clustering | 1.912 |3    | Co-Clustering | 1.912 |4    | Co-Clustering | 1.907 |
+0    | i2v tag-based | 2.267 |1    | i2v tag-based | 2.256 |2    | i2v tag-based | 2.241 |3    | i2v tag-based | 2.242 |4    | i2v tag-based | 2.214 | 
 
 item-based: KNN with Means, k=40.
 
