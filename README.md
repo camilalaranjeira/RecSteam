@@ -70,6 +70,7 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | Co-Clustering | 1.350 |1    | Co-Clustering | 1.351 |2    | Co-Clustering | 1.357 |3    | Co-Clustering | 1.350 |4    | Co-Clustering | 1.350 |
 0    | i2v tag-based | 1.257 |1    | i2v tag-based | 1.239 |2    | i2v tag-based | 1.223 |3    | i2v tag-based | 1.200 |4    | i2v tag-based | 1.332 | 
 0    | genre tag-based | 1.233 |1    | i2v tag-based | 1.220 |2    | i2v tag-based | 1.209 |3    | i2v tag-based | 1.233 |4    | i2v tag-based | 1.222 | 
+0    | genre+i2v tag-based | 1.235 |1    | genre+i2v tag-based | 1.277 |2    | genre+i2v tag-based | 1.259 |3    | genre+i2v tag-based | 1.235 |4    | genre+i2v tag-based | 1.208 | 
 
 item-based: KNN with Means, k=60.
 
