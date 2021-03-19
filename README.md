@@ -36,7 +36,8 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | SVD-spotlight | 2.103 |1    | SVD-spotlight | 2.101 |2    | SVD-spotlight | 2.099 |3    | SVD-spotlight | 2.303 |4    | SVD-spotlight | 2.318 |
 0    | Co-Clustering | 1.900 |1    | Co-Clustering | 1.913 |2    | Co-Clustering | 1.912 |3    | Co-Clustering | 1.912 |4    | Co-Clustering | 1.907 |
 0    | i2v tag-based | 2.267 |1    | i2v tag-based | 2.256 |2    | i2v tag-based | 2.241 |3    | i2v tag-based | 2.242 |4    | i2v tag-based | 2.214 |
-0    | genre tag-based | 2.227 |1    | i2v tag-based | 2.221 |2    | i2v tag-based | 2.209 |3    | i2v tag-based | 2.220 |4    | i2v tag-based | 2.204 | 
+0    | genre tag-based | 2.227 |1    | genre tag-based | 2.221 |2    | genre tag-based | 2.209 |3    | genre tag-based | 2.220 |4    | genre tag-based | 2.204 | 
+0    | genre+i2v tag-based | 2.209 |1    | genre+i2v tag-based | 2.230 |2    | genre+i2v tag-based | 2.218 |3    | genre+i2v tag-based | 2.216 |4    | genre+i2v tag-based | 2.214 | 
 
 item-based: KNN with Means, k=40.
 
