@@ -75,8 +75,8 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | i2v tag-based | 1.257 |1    | i2v tag-based | 1.239 |2    | i2v tag-based | 1.223 |3    | i2v tag-based | 1.200 |4    | i2v tag-based | 1.332 | 
 0    | genre tag-based | 1.233 |1    | i2v tag-based | 1.220 |2    | i2v tag-based | 1.209 |3    | i2v tag-based | 1.233 |4    | i2v tag-based | 1.222 | 
 0    | genre+i2v tag-based | 1.235 |1    | genre+i2v tag-based | 1.277 |2    | genre+i2v tag-based | 1.259 |3    | genre+i2v tag-based | 1.235 |4    | genre+i2v tag-based | 1.208 | 
-0    | i2v tag-based (50T) |  |1    | i2v tag-based (50T) |  |2    | i2v tag-based (50T) |  |3    | i2v tag-based |  |4    | i2v tag-based |  |
-0    | genre tag-based (50T) | |1    | genre tag-based (50T) |  |2    | genre tag-based (50T) |  |3    | genre tag-based (50T) |  |4    | genre tag-based (50T) |  | 
+0    | i2v tag-based (50T) | 1.184 |1    | i2v tag-based (50T) | 1.181 |2    | i2v tag-based (50T) | 1.184 |3    | i2v tag-based | 1.181 |4    | i2v tag-based | 1.180 |
+0    | genre tag-based (50T) | 1.194 |1    | genre tag-based (50T) | 1.192 |2    | genre tag-based (50T) | 1.193 |3    | genre tag-based (50T) | 1.190 |4    | genre tag-based (50T) | 1.191 | 
 0    | genre+i2v tag-based (50T) | 1.191 |1    | genre+i2v tag-based (50T) | 1.188 |2    | genre+i2v tag-based (50T) | 1.183 |3    | genre+i2v tag-based (50T) | 1.177 |4    | genre+i2v tag-based (50T) | 1.176 | 
 0    | Gram | 1.332 |1    | Gram | 1.303 |2    | Gram | 1.332 |3    | Gram | 1.329 |4    | Gram | 1.330 | 
 
