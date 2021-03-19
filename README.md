@@ -38,6 +38,10 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | i2v tag-based | 2.267 |1    | i2v tag-based | 2.256 |2    | i2v tag-based | 2.241 |3    | i2v tag-based | 2.242 |4    | i2v tag-based | 2.214 |
 0    | genre tag-based | 2.227 |1    | genre tag-based | 2.221 |2    | genre tag-based | 2.209 |3    | genre tag-based | 2.220 |4    | genre tag-based | 2.204 | 
 0    | genre+i2v tag-based | 2.209 |1    | genre+i2v tag-based | 2.230 |2    | genre+i2v tag-based | 2.218 |3    | genre+i2v tag-based | 2.216 |4    | genre+i2v tag-based | 2.214 | 
+0    | i2v tag-based (50T) | 2.127 |1    | i2v tag-based (50T) | 2.128 |2    | i2v tag-based (50T) | 2.124 |3    | i2v tag-based | 2.130 |4    | i2v tag-based | 2.125 |
+0    | genre tag-based (50T) | 2.144 |1    | genre tag-based (50T) | 2.144 |2    | genre tag-based (50T) | 2.139 |3    | genre tag-based (50T) | 2.146 |4    | genre tag-based (50T) | 2.143 | 
+0    | genre+i2v tag-based (50T) | 2.143 |1    | genre+i2v tag-based (50T) | 2.144 |2    | genre+i2v tag-based (50T) | 2.140 |3    | genre+i2v tag-based (50T) | 2.147 |4    | genre+i2v tag-based (50T) | 2.144 | 
+0    | Gram | 2.412 |1    | Gram | 2.410 |2    | Gram | 2.406 |3    | Gram | 2.412 |4    | Gram | 2.411 | 
 
 item-based: KNN with Means, k=40.
 
@@ -71,6 +75,10 @@ Fold | Method     | RSME  |Fold | Method     | RSME  |Fold | Method     | RSME  
 0    | i2v tag-based | 1.257 |1    | i2v tag-based | 1.239 |2    | i2v tag-based | 1.223 |3    | i2v tag-based | 1.200 |4    | i2v tag-based | 1.332 | 
 0    | genre tag-based | 1.233 |1    | i2v tag-based | 1.220 |2    | i2v tag-based | 1.209 |3    | i2v tag-based | 1.233 |4    | i2v tag-based | 1.222 | 
 0    | genre+i2v tag-based | 1.235 |1    | genre+i2v tag-based | 1.277 |2    | genre+i2v tag-based | 1.259 |3    | genre+i2v tag-based | 1.235 |4    | genre+i2v tag-based | 1.208 | 
+0    | i2v tag-based (50T) |  |1    | i2v tag-based (50T) |  |2    | i2v tag-based (50T) |  |3    | i2v tag-based |  |4    | i2v tag-based |  |
+0    | genre tag-based (50T) | |1    | genre tag-based (50T) |  |2    | genre tag-based (50T) |  |3    | genre tag-based (50T) |  |4    | genre tag-based (50T) |  | 
+0    | genre+i2v tag-based (50T) | 1.191 |1    | genre+i2v tag-based (50T) | 1.188 |2    | genre+i2v tag-based (50T) | 1.183 |3    | genre+i2v tag-based (50T) | 1.177 |4    | genre+i2v tag-based (50T) | 1.176 | 
+0    | Gram | 1.332 |1    | Gram | 1.303 |2    | Gram | 1.332 |3    | Gram | 1.329 |4    | Gram | 1.330 | 
 
 item-based: KNN with Means, k=60.
 
